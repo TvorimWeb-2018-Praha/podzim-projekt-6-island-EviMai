@@ -11,33 +11,139 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    max-width: 500px;
+    background-color: white;
+    color: black;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    margin-left: 33.3%;
+    border: solid #f5f5f5;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+    margin-left: -20px;
+    padding-top: 30px;
+}
+
+.popisek {
+    text-align: center;
+    margin-top: 0;
+    font-size: 10px;
+    padding-bottom: 20px;
 }
 
 
 /* HLAVICKA */
-
+.hlavicka {
+    display: block;
+    background-image: url(images/island-hlavicka.jpg);
+    background-size: 100%;
+    height: auto;
+    color: white;
+    text-align: center;   
+}
 .titulek {
     font-family: 'Raleway', serif;
+    font-size: 28px;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+.perex{ 
+    margin: 20px;
+}
+.autor {
+    font-style: italic;
+    padding-bottom: 40px;
+    font-size: 10px;
 }
 
-
 /* MENU */
-
-
-
+.menu {
+    display: block;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+li a {
+    box-sizing: content-box;
+    border: solid 0.5px #f5f5f5;
+    text-decoration: none;   
+}
 
 /* OBSAH */
-
-
+.uvod {
+    text-align: justify;
+    margin: 20px;
+}
+.proc {
+    text-align: justify;
+    margin: 20px;
+}
+.mista {
+    text-align: justify;
+    margin: 20px;
+}
 
 
 /* FOTOGALERIE */
 
-
+.foto {
+    text-align: center;
+    background-color: white;
+}
+.foto img {
+    width: 500px;
+    margin: auto;
+}
 
 
 /* PATICKA */
+
+.paticka {
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        max-width: 1000px;
+        margin-left: 15%;
+    } 
+    img {
+        max-width: 1000px;
+        position: relative;
+    } 
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    li a {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    .foto img {
+        display: flex;
+        position: relative;
+        width: 50%;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    .popisek {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
+    .paticka {
+       float: left;
+       width: 1000px;
+    }
+    
+}
